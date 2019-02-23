@@ -8,8 +8,7 @@ const iconURLs = {
 
 const buildMarker = (type, longitude, latitude) => {
   const markerDomEl = document.createElement('div')
-  markerDomEl.style.width = '32px'
-  markerDomEl.style.height = '39px'
+  markerDomEl.classList.add('marker')
   markerDomEl.style.backgroundImage = `url(${iconURLs[type]})`
   return new mapboxgl.Marker(markerDomEl).setLngLat([longitude, latitude])
 }
